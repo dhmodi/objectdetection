@@ -96,13 +96,13 @@
                                 <form id="uploadForm" action="#">
                                     <div class="well" data-bind="fileDrag: fileData">
                                         <div class="form-group row">
-                                            <div class="col-md-8">
+                                            <div class="col-md-6">
                                                 <img style="height: 125px;" class="img-rounded  thumb" data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">
                                                 <div data-bind="ifnot: fileData().dataURL">
                                                     <label>Drag file here</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <input type="file" id="file" class="form-control" data-bind="fileInput: fileData, customFileInput: {
               buttonClass: 'btn btn-success',
               fileNameClass: 'disabled form-control',

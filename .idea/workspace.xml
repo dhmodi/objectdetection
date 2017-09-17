@@ -2,99 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fc3f2c-51a0-461a-bca3-5f0d90833428" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/Pe-icon-7-stroke.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/Pe-icon-7-stroke.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/Pe-icon-7-stroke.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/default-avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/face-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/faces/tim_vector.jpe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/mask.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/new_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sidebar-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sidebar-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sidebar-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sidebar-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sidebar-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/tim_80x80.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/light-bootstrap-dashboard.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/pe-icon-7-stroke.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/Pe-icon-7-stroke.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/loading-bubbles.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-checkbox-radio-switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-notify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/chartist.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-1.10.2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/knockout-file-bindings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/knockout-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/light-bootstrap-dashboard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_chartist.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_checkbox-radio-switch.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_dropdown.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_footers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_inputs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_misc.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_navbars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_responsive.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_sidebar-and-main-panel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_chartist.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_inputs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_morphing-buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_navbars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_social-buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_tabs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_transparency.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/lbd/mixins/_vendor-prefixes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/sass/light-bootstrap-dashboard.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/FC-1214-Pirtek_Cracked-Cover.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/bike-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/bike.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/boys.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/car_cat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/car_cat2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/cat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/chair.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/deloitte-powai-office.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/deloitte1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/deloitte2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/download.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/fish-bike.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/hose_pipe_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/images.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/maxresdefault.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/table-chair.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pics/the-floor.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imagedetection.py" afterPath="$PROJECT_DIR$/imagedetection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video/videoclass.py" afterPath="$PROJECT_DIR$/video/videoclass.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -244,6 +152,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Modi &lt;dhmodi@deloitte.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -538,6 +451,14 @@
       <option name="presentableId" value="Default" />
       <updated>1501151243692</updated>
     </task>
+    <task id="LOCAL-00001" summary="d">
+      <created>1505662442922</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505662442922</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -588,6 +509,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="d" />
+    <option name="LAST_COMMIT_MESSAGE" value="d" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

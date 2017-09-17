@@ -28,7 +28,7 @@ $('#uploadForm').submit(function () {
 	formData.append('file', $('#file')[0].files[0]);
 	console.log("Inside Submit");
 	$.ajax({
-		   url : 'http://localhost:5000/htmlimage',
+		   url : 'https://deloitte-image-analytics.herokuapp.com/htmlimage',
 		   type : 'POST',
 		   data : formData,	
 		   processData: false,  // tell jQuery not to process the data

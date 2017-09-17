@@ -195,4 +195,4 @@ if __name__ == '__main__':
     # static.register('js_all', js)
     print("Starting app on port %d" % port)
 
-    app.run(debug=True, port=port, host='localhost')
+    app.run(debug=True, port=port, host='0.0.0.0')

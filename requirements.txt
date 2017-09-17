@@ -7,3 +7,4 @@ numpy==1.13.1
 opencv-python==3.2.0.7
 h5py==2.7.0
 jsonify==0.5
+Pillow==4.2.1

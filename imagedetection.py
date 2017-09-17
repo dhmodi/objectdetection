@@ -40,31 +40,52 @@ bbox_util = BBoxUtility(NUM_CLASSES)
 
 inputs = []
 images = []
-img_path = './pics/deloitte1.jpg'
-img = image.load_img(img_path, target_size=(300, 300))
-img = image.img_to_array(img)
-images.append(imread(img_path))
-inputs.append(img.copy())
-img_path = './pics/award.jpg'
-img = image.load_img(img_path, target_size=(300, 300))
-img = image.img_to_array(img)
-images.append(imread(img_path))
-inputs.append(img.copy())
-img_path = './pics/maxresdefault.jpg'
-img = image.load_img(img_path, target_size=(300, 300))
-img = image.img_to_array(img)
-images.append(imread(img_path))
-inputs.append(img.copy())
-img_path = './pics/deloitte2.jpg'
-img = image.load_img(img_path, target_size=(300, 300))
-img = image.img_to_array(img)
-images.append(imread(img_path))
-inputs.append(img.copy())
-img_path = './pics/images1.jpg'
-img = image.load_img(img_path, target_size=(300, 300))
-img = image.img_to_array(img)
-images.append(imread(img_path))
-inputs.append(img.copy())
+
+from os import listdir
+from os.path import isfile, join
+import configparser
+
+config = configparser.ConfigParser()
+config.sections()
+config.read('config/config-core.ini')
+path = config['IMAGE']['imagePath']
+file_paths = []  # List which will store all of the full filepaths.
+
+for root, directories, files in os.walk(path):
+        for filename in files:
+            # Join the two strings in order to form the full filepath.
+            img_path = '/'.join([root, filename])
+            img = image.load_img(img_path, target_size=(300, 300))
+            img = image.img_to_array(img)
+            images.append(imread(img_path))
+            inputs.append(img.copy())
+            # file_paths.append(filepath)  # Add it to the list.
+# print (file_paths)
+# img_path = './pics/deloitte1.jpg'
+# img = image.load_img(img_path, target_size=(300, 300))
+# img = image.img_to_array(img)
+# images.append(imread(img_path))
+# inputs.append(img.copy())
+# img_path = './pics/award.jpg'
+# img = image.load_img(img_path, target_size=(300, 300))
+# img = image.img_to_array(img)
+# images.append(imread(img_path))
+# inputs.append(img.copy())
+# img_path = './pics/maxresdefault.jpg'
+# img = image.load_img(img_path, target_size=(300, 300))
+# img = image.img_to_array(img)
+# images.append(imread(img_path))
+# inputs.append(img.copy())
+# img_path = './pics/deloitte2.jpg'
+# img = image.load_img(img_path, target_size=(300, 300))
+# img = image.img_to_array(img)
+# images.append(imread(img_path))
+# inputs.append(img.copy())
+# img_path = './pics/images1.jpg'
+# img = image.load_img(img_path, target_size=(300, 300))
+# img = image.img_to_array(img)
+# images.append(imread(img_path))
+# inputs.append(img.copy())
 inputs = preprocess_input(np.array(inputs))
 
 preds = model.predict(inputs, batch_size=1, verbose=1)

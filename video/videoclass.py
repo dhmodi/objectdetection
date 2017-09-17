@@ -12,6 +12,8 @@ from keras.preprocessing import image
 sys.path.append("..")
 from ssd.ssd_utils import BBoxUtility
 
+import configparser
+
 
 class VideoTestAndroid(object):
     """ Class for testing a trained SSD model on a video file and show the
@@ -48,6 +50,11 @@ class VideoTestAndroid(object):
         # Create unique and somewhat visually distinguishable bright
         # colors for the different classes.
         self.class_colors = []
+        config = configparser.ConfigParser()
+        config.read('config/config-core.ini')
+        self.ip = config['VIDEO']['webcast_ip']
+        self.port = config['VIDEO']['port']
+
         for i in range(0, self.num_classes):
             # This can probably be written in a more elegant manner
             hue = 255*i/self.num_classes
@@ -95,8 +102,9 @@ class VideoTestAndroid(object):
         prev_time = timer()
 
         # Replace the URL with your own IPwebcam shot.jpg IP:port
-        url = 'http://10.12.95.200:8080/shot.jpg'
-
+        #url = 'http://10.12.95.200:8080/shot.jpg'
+        url = 'http://' + self.ip + ':' + self.port + '/shot.jpg'
+        # print(url)
         while True:
             # retval, orig_image = vid.read()
             # if not retval:

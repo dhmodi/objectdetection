@@ -8,6 +8,7 @@ import cv2
 import numpy as np
 from keras.applications.imagenet_utils import preprocess_input
 from keras.preprocessing import image
+import base64
 
 sys.path.append("..")
 from ssd.ssd_utils import BBoxUtility
@@ -82,19 +83,19 @@ class VideoTestAndroid(object):
                     
         """
     
-        # vid = cv2.VideoCapture('https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/00002.00349.mp4')
-        # if not vid.isOpened():
-        #     raise IOError(("Couldn't open video file or webcam. If you're "
-        #     "trying to open a webcam, make sure you video_path is an integer!"))
-        #
-        # # Compute aspect ratio of video
-        # vidw = vid.get(cv2.CAP_PROP_FRAME_WIDTH)
-        # vidh = vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
-        # vidar = vidw/vidh
-        #
-        # # Skip frames until reaching start_frame
-        # if start_frame > 0:
-        #     vid.set(cv2.CAP_PROP_POS_MSEC, start_frame)
+        vid = cv2.VideoCapture('https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/00002.00349.mp4')
+        if not vid.isOpened():
+            raise IOError(("Couldn't open video file or webcam. If you're "
+            "trying to open a webcam, make sure you video_path is an integer!"))
+
+        # Compute aspect ratio of video
+        vidw = vid.get(cv2.CAP_PROP_FRAME_WIDTH)
+        vidh = vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
+        vidar = vidw/vidh
+
+        # Skip frames until reaching start_frame
+        if start_frame > 0:
+            vid.set(cv2.CAP_PROP_POS_MSEC, start_frame)
             
         accum_time = 0
         curr_fps = 0
@@ -103,19 +104,19 @@ class VideoTestAndroid(object):
 
         # Replace the URL with your own IPwebcam shot.jpg IP:port
         #url = 'http://10.12.95.200:8080/shot.jpg'
-        url = 'http://' + self.ip + ':' + self.port + '/shot.jpg'
+        # url = 'http://' + self.ip + ':' + self.port + '/shot.jpg'
         # url = 'https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/00002.00349.mp4'
         # print(url)
         while True:
-            # retval, orig_image = vid.read()
-            # if not retval:
-            #     print("Done!")
-            #     return
+            retval, orig_image = vid.read()
+            if not retval:
+                print("Done!")
+                return
 
             # Use urllib to get the image and convert into a cv2 usable format
-            imgResp = urllib.request.urlopen(url)
-            imgNp = np.array(bytearray(imgResp.read()), dtype=np.uint8)
-            orig_image = cv2.imdecode(imgNp, -1)
+            # imgResp = urllib.request.urlopen(url)
+            # imgNp = np.array(bytearray(imgResp.read()), dtype=np.uint8)
+            # orig_image = cv2.imdecode(imgNp, -1)
             height, width, channels = orig_image.shape
             vidar = width / height
             # put the image on screen

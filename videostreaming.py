@@ -1,6 +1,6 @@
 import sys
 
-from video.videoclass import VideoTestAndroid
+from video.videoclass_new import VideoTestAndroid
 sys.path.append("..")
 from ssd.ssd import SSD300 as SSD
 import warnings
@@ -22,5 +22,5 @@ vid_test = VideoTestAndroid(class_names, model, input_shape)
 
 # To test on webcam 0, remove the parameter (or change it to another number
 # to test on that webcam)
-#vid_test.run('path/to/your/video.mkv')
+# vid_test.run('https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/00002.00349.mp4')
 vid_test.run(0)

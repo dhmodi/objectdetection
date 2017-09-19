@@ -179,7 +179,7 @@ def upload_file():
                 score = top_conf[i] * 100
                 label = int(top_label_indices[i])
                 label_name = voc_classes[label - 1]
-                print(str(round(score,2)))
+                print("Object" + label_name + ":" + str(round(score,2)))
                 output.append('{ "category": "' + label_name + '", "probability": "' + str(round(score,2)) + '%", "xmin": "' + str(xmin) + '", "ymin": "' + str(ymin) + '", "xmax": "' + str(xmax) + '", "ymax": "' + str(ymax) + '"}')
                 #
     return  jsonify(fileName=filename, results=output)

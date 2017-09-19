@@ -1,3 +1,13 @@
+$(document).ready(function(){
+  $('#myModal').modal({ show: false});
+  // setTimeout(function(){
+  //   $(".filedrag").on("drop",function(event){
+  //     event.preventDefault();
+     
+  //     alert("dropoped");
+  //   });
+  // },2000);
+});
 $(function(){
   var viewModel = {};
   viewModel.fileData = ko.observable({
@@ -20,13 +30,48 @@ $(function(){
   ko.applyBindings(viewModel);
 });
 
+// $('#uploadForm').submit(function (e) {
+// 	console.log("Inside Upload Form");
+// 	var formData = new FormData();
+// 	var img = $('#file')[0].files[0];
+	
+// 	formData.append('file', $('#file')[0].files[0]);
+//   if(img){
+//     $('#myModal').modal('show');
+//     $.ajax({
+//       url : 'https://deloitte-image-analytics.herokuapp.com/htmlimage',
+//       type : 'POST',
+//       data : formData,	
+//       processData: false,  // tell jQuery not to process the data
+//       contentType: false,  // tell jQuery not to set contentType
+//          success : function(data) {
+//           console.log(data);
+//           createTable(data);
+//           showImage(data, img);
+//           $('#myModal').modal('hide');
+//          },
+//          error: function(request,status,errorThrown) {
+//            alert("inside error");
+//           $('#myModal').modal('hide');    
+//          }
+//     });
+//   }
+//   else{
+//    e.preventDefault();
+//   }
+// 	return false;
+// });
+
 $('#uploadForm').submit(function () {
 	console.log("Inside Upload Form");
 	var formData = new FormData();
 	var img = $('#file')[0].files[0];
 	console.log(img);
 	formData.append('file', $('#file')[0].files[0]);
-	console.log("Inside Submit");
+  console.log("Inside Submit");
+ 
+  
+    $('#myModal').modal('show');
 	$.ajax({
 		   url : 'https://deloitte-image-analytics.herokuapp.com/htmlimage',
 		   type : 'POST',
@@ -36,9 +81,11 @@ $('#uploadForm').submit(function () {
 		   success : function(data) {
 				console.log(data);
 				createTable(data);
-				showImage(data, img);
+        showImage(data, img);
+        $('#myModal').modal('hide');   
 		   }
-	});
+  });
+  
 	return false;
 });
 
@@ -59,6 +106,7 @@ table.append(tbody);
 container.empty();
 container.append(table);
 }
+
 
 function showImage(data, imgFile){
 var ctx = document.getElementById('myCanvas').getContext('2d');

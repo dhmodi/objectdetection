@@ -55,7 +55,41 @@
     color: #FFFFFF;
 }
 
+.sidebar .sidebar-wrapper{
+    padding-bottom: 0px;
+}
+.sidebar .logo{
+    padding: 19px 78px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 62px;
+}
+
 .table-upgrade td:nth-child(2),
 .table-upgrade td:nth-child(3){
     text-align: center;
+}
+.sidebar:before{
+    background: none;
+   
+}
+.form-control{
+    height:40px !important;
+}
+#uploadForm button{
+    margin-right:18px;
+}
+.position-fixed
+{
+    position: sticky !important;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+#myModal{
+   vertical-align:middle;
+   top: calc(35%);
+}
+#modal-data{
+    width:200px;
+    vertical-align: middle;
 }

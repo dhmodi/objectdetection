@@ -206,8 +206,8 @@ def similarity_image():
             print('No file part')
             return redirect(request.url)
         file2 = request.files['file2']
-        print(file)
-        print(file2)
+        #print(file)
+        #print(file2)
         # if user does not select file, browser also
         # submit a empty part without filename
         if file.filename == '':

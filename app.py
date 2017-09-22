@@ -194,7 +194,8 @@ def similarity_image():
     print("Inside HTML Upload")
     category = "Others"
     filename = ""
-    output = []
+    filename2 = ""
+    output = ""
     if request.method == 'POST':
         # check if the post request has the file part
         print(len(request.files))
@@ -234,7 +235,7 @@ def similarity_image():
                 output="Identical"
             else:
                 output="Matching"
-    return  jsonify(fileName1=filename, fileName2=filename2, results=output)
+    return jsonify(fileName1=filename, fileName2=filename2, results=output)
 
 
 if __name__ == '__main__':

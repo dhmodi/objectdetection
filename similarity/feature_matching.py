@@ -93,10 +93,7 @@ class FeatureDriver():
                     good_score = good_score + len(good)
                     # plt.imshow(img3), plt.show()
                     if not M is None:
-                        print ("\n")
                         print ("number of good matches", len(good))
-                        print ("*"*10, matchesMask)
-
             else:
                 print ("Not enough matches are found - %d/%d" % (len(good),MIN_MATCH_COUNT))
                 matchesMask = None

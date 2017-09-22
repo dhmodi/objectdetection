@@ -199,22 +199,16 @@ def similarity_image():
     if request.method == 'POST':
         # check if the post request has the file part
         print(len(request.files))
-        if 'file' not in request.files:
+        if ('file' not in request.files) or ('file2' not in request.files):
             print('No file part')
             return redirect(request.url)
         file = request.files['file']
-        if 'file2' not in request.files:
-            print('No file part')
-            return redirect(request.url)
         file2 = request.files['file2']
         #print(file)
         #print(file2)
         # if user does not select file, browser also
         # submit a empty part without filename
-        if file.filename == '':
-            print('No selected file')
-            return redirect(request.url)
-        if file2.filename == '':
+        if (file.filename == '') or (file2.filename == ''):
             print('No selected file')
             return redirect(request.url)
         print(file.filename)
@@ -235,7 +229,7 @@ def similarity_image():
                 output="Identical"
             else:
                 output="Matching"
-    return jsonify(fileName1=filename, fileName2=filename2, results=output)
+        return jsonify(fileName1=filename, fileName2=filename2, results=output)
 
 
 if __name__ == '__main__':

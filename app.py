@@ -18,6 +18,7 @@ import warnings
 warnings.simplefilter("ignore", UserWarning)
 from ssd.ssd import SSD300
 from ssd.ssd_utils import BBoxUtility
+from similarity.feature_matching import FeatureDriver
 import cv2
 import numpy as np
 import gc
@@ -46,6 +47,10 @@ def imageUpload():
     flash('Image Upload')
     return render_template('dashboard.html', page_title='My Page!')
 
+@app.route('/similarity')
+def similarity():
+    flash('Image Similarity')
+    return render_template('similarity.html', page_title='My Page!')
 
 @app.route('/image', methods=['POST'])
 def detect_file():
@@ -183,6 +188,54 @@ def upload_file():
                 output.append('{ "category": "' + label_name + '", "probability": "' + str(round(score,2)) + '%", "xmin": "' + str(xmin) + '", "ymin": "' + str(ymin) + '", "xmax": "' + str(xmax) + '", "ymax": "' + str(ymax) + '"}')
                 #
     return  jsonify(fileName=filename, results=output)
+
+@app.route('/similarimage', methods=['POST'])
+def similarity_image():
+    print("Inside HTML Upload")
+    category = "Others"
+    filename = ""
+    output = []
+    if request.method == 'POST':
+        # check if the post request has the file part
+        print(len(request.files))
+        if 'file' not in request.files:
+            print('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        if 'file2' not in request.files:
+            print('No file part')
+            return redirect(request.url)
+        file2 = request.files['file2']
+        print(file)
+        print(file2)
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            print('No selected file')
+            return redirect(request.url)
+        if file2.filename == '':
+            print('No selected file')
+            return redirect(request.url)
+        print(file.filename)
+        print(file2.filename)
+        if file and allowed_file(file.filename) and file2 and allowed_file(file2.filename):
+            filename = secure_filename(file.filename)
+            filename2 = secure_filename(file2.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            file2.save(os.path.join(app.config['UPLOAD_FOLDER'], filename2))
+            # return redirect(url_for('upload_file',
+            #                         filename=filename))
+            img_path = UPLOAD_FOLDER + "/" + filename
+            img_path2 = UPLOAD_FOLDER + "/" + filename2
+            score = FeatureDriver.match_images(img_path, img_path2)
+            if score < 70:
+                output="Not Matching"
+            elif score > 500:
+                output="Identical"
+            else:
+                output="Matching"
+    return  jsonify(fileName1=filename, fileName2=filename2, results=output)
+
 
 if __name__ == '__main__':
     from os import sys, path

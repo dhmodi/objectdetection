@@ -68,6 +68,7 @@ $('#uploadForm').submit(function () {
 	var img = $('#file')[0].files[0];
 	console.log(img);
 	formData.append('file', $('#file')[0].files[0]);
+// formData.append('file2', $('#file2')[0].files[0]);
   console.log("Inside Submit");
  
   
@@ -89,13 +90,60 @@ $('#uploadForm').submit(function () {
 	return false;
 });
 
+$('#uploadSimilarityForm').submit(function () {
+	console.log("Inside Upload Form");
+	var formData = new FormData();
+	var img = $('#file')[0].files[0];
+	console.log(img);
+	formData.append('file', $('#file')[0].files[0]);
+    formData.append('file2', $('#file2')[0].files[0]);
+  console.log("Inside Submit");
+
+
+    $('#myModal').modal('show');
+	$.ajax({
+		   url : 'https://deloitte-image-analytics.herokuapp.com/similarimage',
+		   type : 'POST',
+		   data : formData,
+		   processData: false,  // tell jQuery not to process the data
+		   contentType: false,  // tell jQuery not to set contentType
+		   success : function(data) {
+				console.log(data);
+				createTable(data);
+        showImage(data, img);
+        $('#myModal').modal('hide');
+		   }
+  });
+
+	return false;
+});
+
 function createTable(data){
 	var container = $('#showTable'),
 	table = $('<table class="table table-hover table-striped">');
 	thead=$('<thead>').append('<th>Category</th><th>Probability</th>');
 	tbody=$('<tbody>');
 	console.log("Inside" + jQuery.parseJSON(data['results'][0]).category);
-	for (i = 0; i < data['results'].length; i++) { 
+	for (i = 0; i < data['results'].length; i++) {
+	var jsonData = jQuery.parseJSON(data['results'][i]);
+	var tr = $('<tr>');
+    tr.append('<td>' + jsonData.category + '</td>').append('<td>' + jsonData.probability + '</td>');
+	tbody.append(tr);
+}
+table.append(thead);
+table.append(tbody);
+container.empty();
+container.append(table);
+}
+
+
+function showSimilarity(data){
+	var container = $('#showTable'),
+	table = $('<table class="table table-hover table-striped">');
+	thead=$('<thead>').append('<th>Category</th><th>Probability</th>');
+	tbody=$('<tbody>');
+	console.log("Inside" + jQuery.parseJSON(data['results'][0]).category);
+	for (i = 0; i < data['results'].length; i++) {
 	var jsonData = jQuery.parseJSON(data['results'][i]);
 	var tr = $('<tr>');
     tr.append('<td>' + jsonData.category + '</td>').append('<td>' + jsonData.probability + '</td>');

@@ -1,5 +1,4 @@
 import cv2
-from matplotlib import pyplot as plt
 class FeatureDriver():
 
     def match_images(image1, image2):

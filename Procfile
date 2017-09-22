@@ -1,1 +1,1 @@
-web: python app.py
+web: python app.py --timeout 60 --keep-alive 5 --log-level debug

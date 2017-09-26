@@ -95,25 +95,41 @@
                             </div>
                             <div class="content">
                                 <form id="uploadSimilarityForm" action="#">
+                                    <div class="col-md-6">
                                     <div class="well" ondrop="drop(event)" id="dragaddress" data-bind="fileDrag: fileData">
                                         <div class="form-group row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <img style="height: 125px;" class="img-rounded  thumb" data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">
                                                 <div data-bind="ifnot: fileData().dataURL">
                                                     <label>Drag file here</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 float-right">
+                                            <div class="col-md-6 pull-right">
                                                 <input type="file" id="file" class="form-control" data-bind="fileInput: fileData, customFileInput: {
               buttonClass: 'btn btn-success',
               fileNameClass: 'disabled form-control',
               onClear: onClear,
             }" accept="image/*">
-                                                <input type="file" id="file2" class="form-control" data-bind="fileInput: fileData, customFileInput: {
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="well" ondrop="drop(event)" id="dragaddress2" data-bind="fileDrag: fileData">
+                                            <div class="form-group row">
+                                                <div class="col-md-4">
+                                                    <img style="height: 125px;" class="img-rounded  thumb" data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">
+                                                    <div data-bind="ifnot: fileData().dataURL">
+                                                        <label>Drag file here</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 pull-right">
+                                                    <input type="file" id="file2" class="form-control" data-bind="fileInput: fileData, customFileInput: {
               buttonClass: 'btn btn-success',
               fileNameClass: 'disabled form-control',
               onClear: onClear,
             }" accept="image/*">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -58,8 +58,8 @@ class FeatureDriver():
 
             des1 = np.float32(des1)
             des2 = np.float32(des2)
-
-            matches = flann.knnMatch(des1, des2, 2)
+            if(kp1.size()>=2 and kp2.size()>=2):
+                matches = flann.knnMatch(des1, des2, 2)
 
             # store all the good matches as per Lowe's ratio test.
             good = []
